@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <h1>로그인 페이지 입니다</h1>
+    <form>
+        <fieldset style="display: inline; border: 3px solid black;">
+            사용자 :  
+            <input type="text" name="username">
+            <input type="submit" value="전송"> <br>
+            비밀번호 :
+            <input type="text" name="password">
+        </fieldset>
+    </form>
+    <a href="Form.html" style="color: blue;">비밀번호를 잊어버렸나요?</a>
+
+    <h1>로그인 페이지 입니다</h1>
+    <form> <!--데이터값을 다른 웹페이지로 보내기 위해 사용 -->
+    <table style="border: 3px solid black;"> <!--입력폼을 테이블로 정렬해서 보이기위함 -->
+        <tr> <!-- tr을 사용해서 행(row)을 추가한다-->
+            <td>사용자 : </td> <!--table data의 약자 (개별의 셀값)-->
+            <td>
+            <input type="text" name="username">
+            </td>
+            <td rowspan="2">
+            <input type="submit" value="전송">
+            </td>
+        </tr>
+        <tr>   
+            <td>비밀번호 : </td>
+            <td>
+            <input type="password" name="password">
+            </td>
+        </tr>
+    </table>
+    </form>
+    <a href="Form.html" style="color: blue;">비밀번호를 잊어버렸나요?</a>
+
+    <h1>로그인 페이지입니다</h1>
+    <form>
+        <table style="border: 3px solid black;">
+            <tr>
+                <td>
+                    사용자 : 
+                </td>
+                <td>
+                    <input type="text" name="name">
+                </td>
+                <td rowspan="2"><input type="submit" value="전송"></td> 
+                <!--row 행을 두개를 선택하여 자신의 td와 합친다-->
+            </tr>
+            <tr>
+                <td>비밀번호 :</td>
+                <td>
+                    <input type="password" name="password">
+                </td>
+            </tr>
+        </table>
+
+        <a href="">비밀번호를 잊어버렸나요?</a>
+    </form>
+
+    <form>
+    <h1>설문조사</h1>
+    <p>성별을 체크해주세요</p>
+    <input type="radio" name="gender" value="남">남
+    <input type="radio" name="gender" value="여">여
+    <p>음식을 선택해주세요</p>
+    <input type="checkbox" name="food" vlaue="한식" checked>한식 <br>
+    <input type="checkbox" name="food" vlaue="일식">일식 <br>
+    <input type="checkbox" name="food" vlaue="중식" disabled>중식 <br>
+    <input type="checkbox" name="food" vlaue="양식">양식
+    <p>기타의견을 남겨주세요</p>
+    <textarea name="text" rows="10" cols="30"></textarea>
+    </form>
+
+
+</body>
+</html>

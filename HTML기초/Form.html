@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Form태그 활용</h3>
+    <form>
+        <label>글자를 작성해주세요</label>
+        <input type="text"> <br>
+        password 타입입니다.
+        <input type="password"> <br>
+
+        <p>라디오 버튼입니다 동일한 이름으로 묶어줍니다</p>
+        <input type="radio" name="num" value="1">1 <br>
+        <input type="radio" name="num" value="2">2 <br>
+        <input type="radio" name="num" value="3">3 <br>
+
+        <p>체크박스입니다</p>
+        <input type="checkbox" name="movie" value="영화1" checked> 영화1
+        <input type="checkbox" name="movie" value="영화2"> 영화2
+        <input type="checkbox" name="movie" value="영화3" disabled> 영화3
+
+        <p>파일을 추가해주세요</p>
+        accept를 이용해서 입력받을수 있는 확장자의 종류를 한정시킬수있다.
+        <input type="file" name="file" accept="image/*">
+
+        <p>select 선택입력을 통해 하나의 값 가져오기</p>
+        <select name="fruit">
+            <option value="사과">사과</option>
+            <option value="딸기">딸기</option>
+            <option value="귤">귤</option>
+        </select>
+
+        <p>여러줄을 입력하기 위한 textarea</p>
+        <textarea name="text" rows="10" cols="30"></textarea>
+
+        <p>버튼</p>
+        <button type="button" onclick="alert('버튼을 클릭했습니다')">버튼을 눌러주세요</button>
+
+        <p>input 전송버튼</p>
+        <input type="submit" value="전송버튼">
+ 
+    </form>
+
+</body>
+</html>

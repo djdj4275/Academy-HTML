@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <h1>canvas 확인하기</h1>
+    <figure>
+        <img id="naver" src="../img/naver.png">
+        <figcaption>네이버이미지</figcaption>
+    </figure>
+    <canvas id="myCanvas" width="300" height="500" style="border: 3px solid black"></canvas>
+
+    <h1>SVG 확인하기</h1>
+    
+    <svg>
+    <line x1="50" y="350" x2="100" y2="350" stroke="orange" stroke-width="5"></line>
+    </svg>
+
+    <script>
+        let paper = document.getElementById("myCanvas");
+        let context = paper.getContext("2d");
+        context.fillStyle="#FF0000";
+        context.fillRect(0,0,150,75);
+
+        // 원은 그리기전에 패스을 초기화한다.
+        context.beginPath();
+        context.arc(50,100,10,0,2*Math.PI);
+        context.fill();
+        context.strokeStyle="#FFFF00"
+        context.stroke();
+        /*
+            패스를 지정한 후에 선을 그린다.
+        */
+        
+        context.moveTo(0,0); // 시작점
+        context.lineTo(150,75); // 끝점
+        context.stroke(); // 그려준다.
+
+        context.font = "30px Arial";
+        context.fillStyle = "#0000FF"
+        context.fillText("CANVAS",75,37);
+        context.fillText("CANVAS",75,75);
+        context.fillText("CANVAS",16,48);
+        // fillText는 작성할 내용과 x(시작위치) y(문자의 바닥)에서부터 시작한다.
+
+        // 그라디언트 종류 : 선형/원형
+        let grd = context.createRadialGradient(0,200,5,0,200,100);
+        // Radaal : 원형 그라디언트 (시작 원의 x,y 중심점,반지름,끝나는 원의 x,y중심점,반지름)
+        grd.addColorStop(0,"red");
+        grd.addColorStop(1,"white");
+
+        let grdline = context.createLinearGradient(0,200,150,200);
+        // Linear : 선형그라디언트 (시작 x,y,끝 x,y)
+        grdline.addColorStop(0,"blue");
+        grdline.addColorStop(1,"yellow");
+
+        context.fillStyle = grdline;
+        context.fillRect(0,150,150,50);
+
+        context.strokeStyle = grdline;
+        context.rect(0,120,150,20);
+        context.stroke();
+
+        let ficture = document.getElementById("naver");
+        context.drawImage(ficture,10,250);
+
+        console.log(paper);
+    </script>
+</body>
+</html>
